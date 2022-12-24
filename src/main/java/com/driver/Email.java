@@ -25,49 +25,53 @@ public class Email {
         // 3. It contains at least one lowercase letter
         // 4. It contains at least one digit
         // 5. It contains at least one special character. Any character apart from alphabets and digits is a special character
-        boolean flag=true;
+        boolean uflag=true;
+        boolean lflag=true;
+        boolean dflag=true;
+        boolean sflag=true;
+        boolean nflag=true;
         if(oldPassword.equals(this.getPassword())){
-            if(newPassword.length()<8) flag=false;
+            if(newPassword.length()<8) nflag=false;
 
             for(int i=0;i<newPassword.length();i++){
                 if(Character.isUpperCase(newPassword.charAt(i))){
-                    flag=true;
+                    uflag=true;
                     break;
                 }else{
-                    flag=false;
+                    uflag=false;
                 }
 
             }
             for(int i=0;i<newPassword.length();i++){
                 if(!Character.isUpperCase(newPassword.charAt(i))){
-                    flag=true;
+                    lflag=true;
                     break;
                 }else{
-                    flag=false;
+                    lflag=false;
                 }
 
             }
             for(int i=0;i<newPassword.length();i++){
                 if(Character.isDigit(newPassword.charAt(i))){
-                    flag=true;
+                    dflag=true;
                     break;
                 }else{
-                    flag=false;
+                    dflag=false;
                 }
 
             }
             for(int i=0;i<newPassword.length();i++){
                 if(!Character.isDigit(newPassword.charAt(i)) && !Character.isLetter(newPassword.charAt(i))){
-                    flag=true;
+                    sflag=true;
                     break;
                 }else{
-                    flag=false;
+                    sflag=false;
                 }
 
             }
-            if(flag){
+            if(uflag && sflag && lflag && dflag && nflag){
                 this.password=newPassword;
-//                System.out.println("passChange");
+                System.out.println("passChange");
             }
 
         }
