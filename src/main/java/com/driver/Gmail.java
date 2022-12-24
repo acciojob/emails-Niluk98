@@ -51,10 +51,13 @@ public class Gmail extends Email {
 //                System.out.println(Inbox.get(0).message+" "+Inbox.size());
             }
         }else if(Inbox.size()>=inboxCapacity){
-            Trash.add(Inbox.get(0));
-            Inbox.remove(0);
-//            System.out.println(Inbox.get(0).message);
-            Inbox.add(newMail);
+            if(checkDistinct(newMail)){
+                Trash.add(Inbox.get(0));
+                Inbox.remove(0);
+//                System.out.println(Inbox.get(0).message);
+                Inbox.add(newMail);
+            }
+
         }
 
 
