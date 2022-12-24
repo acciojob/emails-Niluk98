@@ -43,7 +43,7 @@ public class Email {
 
             }
             for(int i=0;i<newPassword.length();i++){
-                if(!Character.isUpperCase(newPassword.charAt(i))){
+                if(Character.isLowerCase(newPassword.charAt(i))){
                     lflag=true;
                     break;
                 }else{
@@ -71,7 +71,7 @@ public class Email {
             }
             if(uflag && sflag && lflag && dflag && nflag){
                 this.password=newPassword;
-//                System.out.println("passChange");
+                System.out.println("passChange");
             }
 
         }
