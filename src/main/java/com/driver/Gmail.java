@@ -69,7 +69,7 @@ public class Gmail extends Email {
         // If the given message is found in any mail in the inbox, move the mail to trash, else do nothing
         if(Inbox.isEmpty()) return;
         int index=getIndex(message);
-       if(getIndex(message)>0){
+       if(getIndex(message)>=0){
            Trash.add(Inbox.get(index));
            Inbox.remove(index);
        }
