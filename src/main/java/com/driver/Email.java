@@ -71,7 +71,7 @@ public class Email {
             }
             if(uflag && sflag && lflag && dflag && nflag){
                 this.password=newPassword;
-                System.out.println("passChange");
+//                System.out.println("passChange");
             }
 
         }
