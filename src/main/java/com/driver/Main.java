@@ -17,9 +17,9 @@ public class Main {
         gmail.receiveMail(new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2022"), "Abhishek", "Assignment to be uploaded on database.");
         gmail.receiveMail(new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2023"), "Tushar", "Everything looks good.");
 //        gmail.receiveMail(new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2022"), "Tushar", "Everything looks good.");
-
-        System.out.println("Total " + gmail.getInboxSize() + " mails in inbox.");
-        System.out.println("There are " + gmail.findMailsBetweenDates(new SimpleDateFormat("dd/MM/yyyy").parse("21/12/2020"), new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2023")) + " mails between given dates!");
+//
+//        System.out.println("Total " + gmail.getInboxSize() + " mails in inbox.");
+//        System.out.println("There are " + gmail.findMailsBetweenDates(new SimpleDateFormat("dd/MM/yyyy").parse("21/12/2020"), new SimpleDateFormat("dd/MM/yyyy").parse("23/12/2023")) + " mails between given dates!");
 //        System.out.println("The latest message is :" + gmail.findLatestMessage());
         gmail.deleteMail("Everything looks good.");
 //        System.out.println("There are " + gmail.getTrashSize() + " mails in the trash.");
